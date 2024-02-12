@@ -1,0 +1,44 @@
+<mvc:View
+    controllerName="com.wipro.ticketing.controller.Login"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+ 
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <Image
+                id="_IDGenImage2"
+                class="iconimage"
+                alt="alttextimage"
+                src="images/icon.png"
+            />
+
+<VBox class="center-content" width="30%" height="88%" alignItems="Start" >
+
+<Text text="Login" class = "Loginn"/>
+          <VBox class = "margining"> <Text text="Select User Type : "/>
+            <Select id="userTypeSelect" width="10rem" change="onUserTypeChange">
+              <core:Item key="customer" text="Customer"/>
+              <core:Item key="technician" text="Technician"/>
+            </Select>
+            </VBox>
+            <VBox class = "margining">
+            <Text text="User ID : "/>
+            <Input id="usernameInput" placeholder="User ID" width="22rem"/>  </VBox>
+           <VBox class = "margining"> <Text text="Password : "/>
+            <Input id="passwordInput" width="22rem" placeholder="Password" type="Password"/>  </VBox>
+        <Link
+			class = "linkcss"	text="Don't have account? Sign-up" id = "signupButton"
+				press="onSignUp" enabled="{= ${userTypeSelect>selectedKey} === 'customer'}"  />
+            <Button class = "marginingg" id="loginButton" type="Emphasized" text="Continue" press="onLoginPress"/>
+            <!-- <Button id="signupButton" class = "marginingg" text="Sign Up" press="onSignUp" enabled="{= ${userTypeSelect>selectedKey} === 'customer'}"/> -->
+          </VBox>
+        </content>
+    </Page>
+</mvc:View>

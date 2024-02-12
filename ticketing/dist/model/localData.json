@@ -1,0 +1,29 @@
+{
+    "technicianResolution": [
+        {
+            "serReqID": "SR-1707484285770-8516",
+            "customerID": 12345,
+            "issue": "Laptop",
+            "areaOfConcern": "Infra",
+            "status": "Open",
+            "priority": 2,
+            "expectedDate": "2024-02-12T18:30:00.000Z",
+            "owner_customerID": 12345,
+            "timeStamp": "2024-02-09T13:11:57.903Z"
+        },
+        {
+            "serReqID": "SR-1707484285770-8516",
+            "customerID": 12345,
+            "issue": "Laptop",
+            "areaOfConcern": "Infra",
+            "status": "Open",
+            "priority": 2,
+            "expectedDate": "2024-02-12T18:30:00.000Z",
+            "owner_customerID": 12345,
+            "timeStamp": "2024-02-09T13:11:57.903Z"
+        }
+    ],
+    "results": [
+
+    ]
+}
