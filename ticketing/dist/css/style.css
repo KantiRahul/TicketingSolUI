@@ -1,0 +1,58 @@
+/* Enter your custom styles here */
+
+.allborders{
+    border-radius:10px;
+   
+}
+.costtable{
+    /* padding: 0.5rem; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.5rem;
+}
+.overflow{
+    background: #354A5F;
+    color: white
+}
+.textcss3{
+    font-size: medium;
+    color:white;
+    font-weight: bold;
+}
+
+.center-content {
+    margin: auto;
+    width: 50%; /* Adjust width as needed */
+    height: 50%; /* Adjust height as needed */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 0 2px rgba(91,115,139,0.16), 0 32px 64px rgba(91,115,139,0.16);
+    border-radius: 1rem;
+
+    /* box-shadow: 5px 5px 5px rgb(179, 177, 177); */
+  }
+
+  .margining{
+    margin-top: 2.5rem;
+    margin-left: 2rem;
+  }
+  .marginingg{
+    margin-top: 17rem;
+    margin-left: 21rem;
+  }
+.Loginn{
+  
+  font-size: 1.5rem;
+  font-weight: bolder;
+  line-height: 1.875rem;
+        margin-top: 1.5rem;
+        margin-left: 2rem;
+      
+}
+.linkcss{
+  margin-left: 13rem ;
+}

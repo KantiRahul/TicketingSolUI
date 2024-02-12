@@ -1,0 +1,53 @@
+<mvc:View controllerName="com.wipro.ticketing.controller.CustomerResolution"
+   	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core"
+	xmlns ="sap.m">
+    <Page id="page"  class="sapUiSmallMargin" title="{i18n>title}">
+                                            <Table  width="95%" id ="costtable" class="sapUiSmallMargin" growing="true"  items="{path: 'view>/results'}"    > 
+                                    <headerToolbar> 
+                                        <Toolbar id="_IDGenToolbar1" design="Solid"> 
+                                            <!-- <ToolbarSpacer /> -->
+                                            <Title id="_IDGenTitle1" text="Resolution" /> 
+                                            <ToolbarSpacer id="_IDGenToolbarSpacer1" />
+                                         
+                                            <Button id="_IDGenButton1" text ="Back" press="onBack" />
+                                          		<Button id="_IDGenButton2" icon="sap-icon://log" press = "logout"  />
+                                        </Toolbar> 
+                                    </headerToolbar> 
+                                    <columns > 
+                                        
+                                        <Column id="_IDGenColumn1" >
+                                            <Text id="_IDGenText1" text="Service Request Id" />
+                                        </Column>
+                                        <Column id="_IDGenColumn2" >
+                                            <Text id="_IDGenText2" text="Customer Id" />
+                                        </Column>
+                                        <Column id="_IDGenColumn3" >
+                                            <Text id="_IDGenText3" text="Technician Id" />
+                                        </Column>
+                                        <Column id="_IDGenColumn4" >
+                                            <Text id="_IDGenText4" text="Technician Name" />
+                                        </Column>
+                                        <Column id="_IDGenColumn5" >
+                                            <Text id="_IDGenText5" text="Resolution Time" />
+                                        </Column>
+                      
+
+                                    </columns> 
+                                    <items> 
+                                        <ColumnListItem id="_IDGenColumnListItem1" >   
+                                            <cells>     
+                                                <Text id="_IDGenText6"  text="{view>serReqID}" /> 
+                                                <Text id="_IDGenText7" text="{view>customerID}" /> 
+                                                <Text id="_IDGenText8" text="{view>technicianID}" /> 
+                                                <Text id="_IDGenText9" text="{view>technicianName}" />
+                                                <Text id="_IDGenText10"  text="{view>resolTimeStamp}" /> 
+
+                                            </cells> 
+                                        </ColumnListItem> 
+                                    </items> 
+                                </Table>        
+    </Page>
+</mvc:View>

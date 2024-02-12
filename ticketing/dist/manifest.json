@@ -1,0 +1,181 @@
+{
+    "_version": "1.59.0",
+    "sap.app": {
+        "id": "com.wipro.ticketing",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "resources": "resources.json",
+        "sourceTemplate": {
+            "id": "@sap/generator-fiori:basic",
+            "version": "1.12.3",
+            "toolsId": "203d78bb-a14c-4d9c-8af0-59c46345eab4"
+        },
+        "dataSources": {
+            "odata": {
+                "uri": "v2/odata/v4/catalog/",
+                "type": "OData"
+            }
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": true,
+        "dependencies": {
+            "minUI5Version": "1.120.6",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {},
+                "sap.f": {},
+                "sap.suite.ui.generic.template": {},
+                "sap.ui.comp": {},
+                "sap.ui.generic.app": {},
+                "sap.ui.table": {},
+                "sap.ushell": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "com.wipro.ticketing.i18n.i18n"
+                }
+            },
+            "localmodel": {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "model/localData.json"
+            },
+            "odatamodel": {
+                "type": "sap.ui.model.odata.v2.ODataModel",
+                "dataSource": "odata",
+                "preload": true,
+                "settings": {
+                    "defaultOperationMode": "Server",
+                    "defaultBindingMode": "OneWay",
+                    "defaultCountMode": "Request"
+                }
+            }
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "async": true,
+                "viewPath": "com.wipro.ticketing.view",
+                "controlAggregation": "pages",
+                "controlId": "app",
+                "clearControlAggregation": false
+            },
+            "routes": [
+                {
+                    "name": "RouteLogin",
+                    "pattern": ":?query:",
+                    "target": [
+                        "TargetLogin"
+                    ]
+                },
+                {
+                    "name": "RouteCservice",
+                    "pattern": "CustomerServiceRequest",
+                    "target": [
+                        "TargetCustomerServiceRequest"
+                    ]
+                },
+                {
+                    "name": "RouteCresolution",
+                    "pattern": "CustomerResolution",
+                    "target": [
+                        "TargetCustomerResolution"
+                    ]
+                },
+                {
+                    "name": "RouteTresolution",
+                    "pattern": "TechnicianResolution",
+                    "target": [
+                        "TargetTechnicianResolution"
+                    ]
+                },
+                {
+                    "name": "Signup",
+                    "pattern": "Signup",
+                    "target": [
+                        "TargetSignup"
+                    ]
+                }
+            ],
+            "targets": {
+                "TargetLogin": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "Login",
+                    "viewName": "Login"
+                },
+                "TargetSignup": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "Signup",
+                    "viewName": "Signup"
+                },
+                "TargetCustomerServiceRequest": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "CustomerServiceRequest",
+                    "viewName": "CustomerServiceRequest"
+                },
+                "TargetCustomerResolution": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "CustomerResolution",
+                    "viewName": "CustomerResolution"
+                },
+                "TargetTechnicianResolution": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "TechnicianResolution",
+                    "viewName": "TechnicianResolution"
+                }
+            }
+        },
+        "rootView": {
+            "viewName": "com.wipro.ticketing.view.App",
+            "type": "XML",
+            "async": true,
+            "id": "App"
+        }
+    }
+}

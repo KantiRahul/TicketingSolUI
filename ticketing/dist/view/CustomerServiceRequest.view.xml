@@ -1,0 +1,112 @@
+<mvc:View controllerName="com.wipro.ticketing.controller.CustomerServiceRequest"
+   	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core"
+	xmlns ="sap.m">
+    <Page id="page" title="{i18n>title}">
+ 	<VBox class="sapUiSmallMargin">
+		<f:Form id="FormToolbar"
+			editable="true"
+			ariaLabelledBy="Title1">
+			<f:toolbar>
+				<Toolbar id="TB1">
+					<ToolbarSpacer />
+					<Title id="Title1" text="Raise a service Request" />
+					<ToolbarSpacer />
+					<Button text="Resolution" press="ResolutionNav"/>
+					<Button icon="sap-icon://log" press = "logout"  />
+				</Toolbar>
+			</f:toolbar>
+			<f:layout>
+				<f:ResponsiveGridLayout
+					labelSpanXL="4"
+					labelSpanL="3"
+					labelSpanM="4"
+					labelSpanS="12"
+					adjustLabelSpan="false"
+					emptySpanXL="0"
+					emptySpanL="4"
+					emptySpanM="0"
+					emptySpanS="0"
+					columnsXL="2"
+					columnsL="1"
+					columnsM="1"
+					singleContainerFullSize="false" />
+			</f:layout>
+			<f:formContainers>
+				<f:FormContainer ariaLabelledBy="Title2">
+					<f:toolbar>
+						<Toolbar>
+							<Title id="Title2" />
+							<ToolbarSpacer />
+							<!-- <Button icon="sap-icon://settings"/> -->
+						</Toolbar>
+					</f:toolbar>
+					<f:formElements>
+						<f:FormElement label="Service RequestId">
+							<f:fields>
+								<Input  id="name" value = "{localmodel>/ServiceRequestId}" editable="false"/>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="customer id" editable="false">
+							<f:fields>
+								<Input id ="custID" value = "{localmodel>/CustomerId}" editable="false"/>
+								<!-- <Input value="{HouseNumber}">
+									<layoutData>
+										<l:GridData span="XL2 L1 M3 S4" />
+									</layoutData>
+								</Input> -->
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Issue">
+							<f:fields>
+								<Input value="{}" id = "issueInput">
+								</Input>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Area of Concern">
+							<f:fields>
+								<Input value="{}" id = "areaInput">
+								</Input>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Status">
+							<f:fields>
+								<Input value="{}" id = "statusInput" editable="false">
+								</Input>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Priority">
+							<f:fields>
+								<Input value="{}" id ="priorityInput" editable="true">
+								</Input>
+							</f:fields>
+						</f:FormElement>
+
+						<f:FormElement label="Expected Date">
+							<f:fields>
+									
+				<DatePicker
+					id="DP1"
+					placeholder="Enter Date"
+					change="handleChange"
+					class="sapUiSmallMarginBottom"/>
+								
+							</f:fields>
+						<Button text="Submit"
+						press="onPress1"
+						type="Emphasized"
+						ariaDescribedBy="comingSoonButtonDescription genericButtonDescription"
+						enabled="true"/>
+						</f:FormElement>
+						
+
+					</f:formElements>
+				</f:FormContainer>
+
+			</f:formContainers>
+		</f:Form>
+	</VBox>
+    </Page>
+</mvc:View>
